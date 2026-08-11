@@ -18,7 +18,7 @@ Copy-Item template.cpp $name
 Write-Host "Tao file: $name" -ForegroundColor Green
 
 # Mở file nếu có editor
-$editors = @("code", "nvim", "vim", "notepad")
+$editors = @("zed", "code", "nvim", "vim", "notepad")
 foreach ($ed in $editors) {
     if (Get-Command $ed -ErrorAction SilentlyContinue) {
         & $ed $name
